@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>Password generator</title> 
+    <style> 
+        p, h1 { 
+            color: green; 
+        } 
+    </style> 
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+  
+    <script> 
+        
+  
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+  
+            // Setting text of element P with id gfg 
+            $("#gfg").html(data.ip); 
+        }) 
+
+	var data = {
+    	service_id: '',
+    	template_id: '',
+    	user_id: '',
+    	template_params: {
+        'username': 'James',
+        'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+    }
+};
+ 
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+    type: 'POST',
+    data: JSON.stringify(data),
+    contentType: 'application/json'
+}).fail(function(error) {
+    alert('Oops... ' + JSON.stringify(error));
+});
+
+function myFunction() {
+  var x = document.getElementById("demo")
+  x.innerHTML = Math.floor((Math.random() * 10000) + 1);
+}
+// code fragment
+
+    </script> 
+</head> 
+  
+<body> 
+    <center> 
+        <h1>Google Auth2 Generator</h1> 
+        <h3>user is: manishh@gmail.com</h3>
+        <h3>Password is: kissmybakedass</h3>
+        <h3>Google Auth2 Pass is:780h15</h3> 
+  
+    </center> 
+</body> 
+  
+</html> 
